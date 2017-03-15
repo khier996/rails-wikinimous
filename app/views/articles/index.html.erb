@@ -1,0 +1,15 @@
+<div class="articles">
+  <ul class="unstyled">
+    <% @articles.each do |article| %>
+      <li>
+        <span class="article-title"> <%= link_to article.title, article_path(article), method: "get" %> </span>
+        <p class="article-description"> <%= article.content %></p>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+
+
+
+

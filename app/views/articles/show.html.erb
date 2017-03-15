@@ -1,0 +1,19 @@
+
+<% content = Kramdown::Document.new(@article.content).to_html.html_safe %>
+
+
+<div class="wrapper">
+  <div class="article">
+    <h1><%= @article.title %></h1>
+    <div class="content"></div>
+    <%= content %>
+
+    <%= link_to 'Delete', article_path, method: 'delete', class: "btn btn-primary" %>
+    <%= link_to 'Edit', edit_article_path, class: "btn btn-primary" %>
+  </div>
+</div>
+
+
+
+
+
